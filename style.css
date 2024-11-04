@@ -1,111 +1,168 @@
-
+/* Apply box-sizing globally */
 * {
-    box-sizing: border-box;
-  }
-  
- 
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: rgb(255, 255, 255);
-    font-size: 18px;
-    transition: 0.2s;
-  
-   
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  
-  ul li:nth-child(odd) {
-    background: #f9f9f9;
-  }
-  
-  
-  ul li:hover {
-    background: #ddd;
-  }
-  
- 
-  ul li.checked {
-    background: rgb(88, 81, 81);
-    color: #fff;
-    text-decoration: line-through;
-  }
-  
-  ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: rgb(228, 211, 211);
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-  }
-  
- 
-  .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 16px 12px 16px;
-  }
-  
-  .close:hover {
-    color: white;
-  }
-  
- 
-  .header {
-    background-color: #acacac;
-    padding: 30px 40px;
-    color: rgb(8, 5, 5);
-    text-align: center;
-  }
-  
- 
-  .header:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
- 
-  input {
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    width: 50%;
-    align-items: center;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
+  box-sizing: border-box;
+}
 
-  .addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: rgb(0, 0, 0);
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 0;
-  }
+/* Reset default styling for lists */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for each list item */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #fff;
+  font-size: 18px;
+  transition: 0.2s;
+  border-bottom: 1px solid #ddd;
+  user-select: none;
+}
+
+/* Alternate background color for odd list items */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Hover effect for list items */
+ul li:hover {
+  background: #ddd;
+}
+
+/* Checked item styling */
+ul li.checked {
+  background: #585151;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Custom checkmark for checked items */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #e4d3d3;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Close button styling for list items */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #555;
+}
+
+/* Header styling */
+.header {
+  background-color: #acacac;
+  padding: 30px 40px;
+  color: #080505;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Clearfix for header content */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Input field styling */
+input[type="text"], input[type="date"], select {
+  margin: 5px;
+  border: none;
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Add button styling */
+.addBtn {
+  padding: 10px;
+  width: 20%;
+  background: #d9d9d9;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+/* Priority-based styling */
+.high {
+  background-color: #ffcccc;
+}
+
+.medium {
+  background-color: #fff2cc;
+}
+
+.low {
+  background-color: #ccffcc;
+}
+
+/* Due date styling */
+.dueDate {
+  font-size: 12px;
+  color: #888;
+  margin-left: 10px;
+}
+
+/* Dark mode styling */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .header {
+  background-color: #555;
+}
+
+body.dark-mode ul li {
+  background: #444;
+  color: #fff;
+}
+
+body.dark-mode ul li:nth-child(odd) {
+  background: #555;
+}
+
+/* Toggle button styling */
+.toggleDarkMode {
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.toggleDarkMode:hover {
+  background-color: #444;
+}
   
-  .addBtn:hover {
-    background-color: rgb(255, 255, 255);
-  }

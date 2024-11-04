@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>example</title>
+    <title>To-Do List</title>
 </head>
-
 <body>
     <div id="myDIV" class="header">
-        <h1>MY TO DO LIST!! </h1>
-        <input type="text" id="myInput" placeholder="ADD LIST!!!">
-        <br/>
-        <br/>
+        <h1>MY TO DO LIST</h1>
+        <input type="text" id="myInput" placeholder="Add task...">
+        <input type="date" id="dueDateInput" placeholder="Due date">
+        <select id="priorityInput">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
         <span onclick="newElement()" class="addBtn">ADD</span>
-      </div>
-      
-      <ul id="myUL">
-        <li>Check Emails</li>
-        <li>Time management</li>
-      </ul>
-      
-<script src="script.js"> </script>
+        <button onclick="toggleDarkMode()" class="toggleDarkMode">Toggle Dark Mode</button>
+    </div>
+
+    <ul id="myUL"></ul>
+
+<script src="script.js"></script>
 </body>
 </html>
